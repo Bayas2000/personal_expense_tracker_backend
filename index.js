@@ -16,7 +16,7 @@ const PORT = process.env.PORT
 
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://group-investmate001.vercel.app'
+    'https://personal-expense-tracker-frontend-ten.vercel.app'
 ];
 
 app.use(cors({
