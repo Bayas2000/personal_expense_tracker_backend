@@ -22,9 +22,10 @@ module.exports.findExist = async (name) => {
     return exist
 }
 
-module.exports.getAllData = async () => {
+module.exports.getAllData = async (mainFilter) => {
     try {
         const aggregateQuery = [
+            { $match: mainFilter },
             { $sort: { createdAt: - 1 } }
         ]
         const queryResult = await recurringModel.aggregate(aggregateQuery)
