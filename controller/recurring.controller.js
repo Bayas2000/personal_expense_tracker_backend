@@ -23,7 +23,7 @@ module.exports.getAllData = async (req, res) => {
         const { isActive } = req.query
         const userId = req.userId
         const mainFilter = {
-            ...({ isActive: isActive ? isActive : { $ne: 'false' } }),
+            ...({ isActive: isActive ? isActive : { $ne: false } }),
             ...(userId ? { createdBy: new ObjectId(userId) } : {}),
 
         }
